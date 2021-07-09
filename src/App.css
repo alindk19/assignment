@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Helvetica Neue;
+  src: url("./HelveticaNeue-Regular.otf");
+}
+
+html {
+  height: 100%;
+  background-color: #edf6ff;
+}
+body {
+  font-family: Helvetica Neue;
+  height: 100%;
+  background: transparent linear-gradient(248deg, #303f60 0%, #1a253c 100%) 0%
+    0% no-repeat padding-box;
+  background-size: auto 40%;
+}
+
+#root {
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+}

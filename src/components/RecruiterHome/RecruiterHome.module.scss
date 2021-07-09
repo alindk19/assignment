@@ -1,0 +1,33 @@
+.homeWrapper {
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  h2 {
+    color: #ffffff;
+  }
+
+  .postWrapper {
+    height: 100%;
+    margin-top: 150px;
+  }
+
+  .noPostWrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h3 {
+      font-size: 20px;
+      color: #303f60;
+    }
+    button {
+      color: #ffffff;
+      padding: 14px 34px;
+      background-color: #43afff;
+      border: 1px solid #43afff;
+      border-radius: 5px;
+    }
+  }
+}

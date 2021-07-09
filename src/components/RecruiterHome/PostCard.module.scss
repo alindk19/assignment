@@ -1,0 +1,36 @@
+.cardWrapper {
+  width: 260px;
+  height: 162px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  .heading {
+    font-size: 17px;
+    color: #303f60;
+  }
+  .description {
+    font-size: 14px;
+    color: #303f60;
+    height: 64px;
+    opacity: 0.8;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .location {
+      color: #303f60;
+      opacity: 0.8;
+    }
+    button {
+      font-size: 12px;
+      padding: 9px 15px;
+      background: #43afff33 0% 0% no-repeat padding-box;
+      border: none;
+      border-radius: 5px;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.container {
+  height: 100%;
+  display: flex;
+  .signupWrapper {
+    height: 720px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    form {
+      width: 80%;
+      margin: auto;
+      .inputField {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin: 20px 0;
+        label,
+        a {
+          font: normal normal normal 14px/16px Helvetica Neue;
+          font-weight: 100;
+          letter-spacing: 0px;
+          color: #303f60;
+        }
+        a {
+          color: #43afff;
+        }
+        input {
+          padding: 10px;
+          border: 1px solid #43afff;
+          border-radius: 5px;
+          outline: none;
+          background-color: #e8e8e833;
+        }
+
+        .passwordHeading {
+          display: flex;
+          justify-content: space-between;
+        }
+        .error {
+          align-self: flex-end;
+          font-size: 12px;
+          color: red;
+        }
+      }
+      .submitBtn {
+        padding: 13px 52px;
+        width: 150px;
+        margin: auto;
+        display: flex;
+        background: #43afff 0% 0% no-repeat padding-box;
+        border: 1px solid #43afff;
+        border-radius: 5px;
+        color: #ffffff;
+      }
+      .heading {
+        color: #303f60;
+        font-size: 22px;
+      }
+      .type {
+        margin-top: 20px;
+        .selected {
+          padding: 10px;
+          background-color: #43afff;
+          color: white;
+          border-radius: 5px;
+          border: none;
+          margin-right: 10px;
+        }
+        .nonSelected {
+          padding: 10px;
+          background-color: #e8e8e833;
+          color: #43afff;
+          border: 1px solid #c6c6c6;
+          border-radius: 5px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .password {
+      display: flex;
+      .inputField {
+        max-width: 50%;
+        margin-right: 15px;
+      }
+    }
+    .loginFooter {
+      font-size: 1rem;
+      margin: auto;
+      a {
+        color: #43afff;
+      }
+    }
+  }
+}

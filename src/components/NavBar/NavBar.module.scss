@@ -1,0 +1,24 @@
+.navBar {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #43afff;
+  align-items: center;
+  .title {
+    color: white;
+    span {
+      color: #43afff;
+    }
+  }
+  .loginBtn {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    font-family: Helvetica Neue;
+    background: #43afff33 0% 0% no-repeat padding-box;
+    border: 1px solid #43afff;
+    border-radius: 5px;
+  }
+}

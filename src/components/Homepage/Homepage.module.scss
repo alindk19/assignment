@@ -1,0 +1,60 @@
+.wrapper {
+  height: 100%;
+  .container {
+    width: 80%;
+    margin: auto;
+    height: 270px;
+    .header {
+      margin-top: 60px;
+      .heading {
+        color: white;
+        font-size: 20px;
+        max-width: 240px;
+        margin: auto;
+        // float: left;
+        span {
+          color: #43afff;
+        }
+        button {
+          color: #ffffff;
+          padding: 10px 15px;
+          background: #43afff 0% 0% no-repeat padding-box;
+          border-radius: 5px;
+          border: 1px solid #43afff;
+        }
+      }
+      //   .image {
+      //     float: right;
+      //   }
+    }
+  }
+  .main {
+    width: 80%;
+    margin: auto;
+
+    .cards {
+      display: flex;
+
+      .card {
+        min-width: 341px;
+        background-color: white;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        .cardHeading {
+          color: #43afff;
+          width: 170px;
+          font-size: 22px;
+        }
+        .cardContent {
+          font-size: 14px;
+          max-width: 301px;
+        }
+      }
+    }
+  }
+  .companiesWrapper {
+    width: 80%;
+    margin: auto;
+  }
+}
