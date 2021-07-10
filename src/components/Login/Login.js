@@ -7,6 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -24,10 +25,11 @@ const Login = () => {
       })
       .then(({ data }) => {
         localStorage.setItem("token", JSON.stringify(data.data));
+        setError(false);
         history.push("/home");
       })
       .catch((error) => {
-        alert(error);
+        setError(true);
       });
   };
   return (
@@ -59,9 +61,11 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <span className={styles.error}>
-              Invalid email address or password.
-            </span>
+            {error && (
+              <span className={styles.error}>
+                Invalid email address or password.
+              </span>
+            )}
           </div>
           <button className={styles.submitBtn} type="submit">
             Login
