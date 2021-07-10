@@ -17,8 +17,9 @@ const Signup = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
-      history.push("/homepage");
+      history.push("/home");
     }
+    //eslint-disable-next-line
   }, []);
 
   const handleSubmit = (e) => {

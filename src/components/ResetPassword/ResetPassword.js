@@ -1,20 +1,48 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./ResetPassword.module.scss";
-import { Link } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
+import axios from "axios";
 
-const ResetPassword = () => {
+const ResetPassword = (props) => {
   const [userDetails, setUserDetails] = useState({
     password: "",
-    confirm_password: "",
+    confirmPassword: "",
   });
+  const location = useLocation();
+  const history = useHistory();
 
-  // const handleSubmit = () => {
-
-  // }
+  useEffect(() => {
+    verifyToken();
+    //eslint-disable-next-line
+  }, []);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("https://jobs-api.squareboat.info/api/v1/auth/resetpassword", {
+        ...userDetails,
+        token: location.state.token,
+      })
+      .then(({ data: { data } }) => {
+        localStorage.setItem("token", JSON.stringify(data));
+        history.push("/login");
+      });
+  };
+  const verifyToken = () => {
+    const verificationToken = location?.state?.token;
+    axios
+      .get(
+        `https://jobs-api.squareboat.info/api/v1/auth/resetpassword/${verificationToken}`
+      )
+      .then((res) => {})
+      .catch((err) => {
+        alert(err);
+        history.push("/");
+      });
+  };
   return (
     <div className={styles.container}>
       <div className={styles.signupWrapper}>
-        <form>
+        <form onSubmit={handleSubmit}>
           <span className={styles.heading}>Reset Your Password</span>
           <p>Enter your new password below.</p>
           <div className={styles.inputField}>
@@ -40,11 +68,11 @@ const ResetPassword = () => {
               name="password"
               placeholder="Enter your password"
               required
-              value={userDetails.confirm_password}
+              value={userDetails.confirmPassword}
               onChange={(e) =>
                 setUserDetails({
                   ...userDetails,
-                  confirm_password: e.target.value,
+                  confirmPassword: e.target.value,
                 })
               }
             />

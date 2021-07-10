@@ -21,4 +21,29 @@
     border: 1px solid #43afff;
     border-radius: 5px;
   }
+  .login {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .post {
+      color: #ffffff;
+    }
+    .profile {
+      padding: 11px 15px;
+      border-radius: 50%;
+      background-color: #d9efff;
+      color: #303f60;
+      cursor: pointer;
+    }
+    .logout {
+      position: absolute;
+      top: 50px;
+      right: -10px;
+      padding: 10px 15px;
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+  }
 }

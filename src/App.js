@@ -7,6 +7,7 @@ import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import ResetPassword from "./components/ResetPassword/ResetPassword";
 import NavBar from "./components/NavBar/NavBar";
 import RecruiterHome from "./components/RecruiterHome/RecruiterHome";
+import PostJob from "./components/PostJob/PostJob";
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route exact path="/home">
             <RecruiterHome />
+          </Route>
+          <Route exact path="/post">
+            <PostJob />
           </Route>
         </Switch>
       </div>

@@ -6,9 +6,10 @@
     color: #ffffff;
   }
 
-  .postWrapper {
+  .postsWrapper {
     height: 100%;
-    margin-top: 150px;
+    margin-top: 100px;
+    display: flex;
   }
 
   .noPostWrapper {
@@ -28,6 +29,7 @@
       background-color: #43afff;
       border: 1px solid #43afff;
       border-radius: 5px;
+      cursor: pointer;
     }
   }
 }

@@ -1,0 +1,68 @@
+.container {
+  height: 100%;
+  display: flex;
+  .signupWrapper {
+    height: 420px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    form {
+      width: 80%;
+      margin: auto;
+      .inputField {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin: 20px 0;
+        label,
+        a {
+          font: normal normal normal 14px/16px Helvetica Neue;
+          font-weight: 100;
+          letter-spacing: 0px;
+          color: #303f60;
+        }
+        a {
+          color: #43afff;
+        }
+        input,
+        textarea {
+          padding: 10px;
+          border: 1px solid #43afff;
+          border-radius: 5px;
+          outline: none;
+          background-color: #e8e8e833;
+          resize: none;
+        }
+
+        .error {
+          align-self: flex-end;
+          font-size: 12px;
+          color: red;
+        }
+      }
+      .description {
+        height: 100px;
+      }
+      .submitBtn {
+        padding: 13px 52px;
+        width: 150px;
+        margin: auto;
+        display: flex;
+        background: #43afff 0% 0% no-repeat padding-box;
+        border: 1px solid #43afff;
+        border-radius: 5px;
+        color: #ffffff;
+        cursor: pointer;
+      }
+      .heading {
+        color: #303f60;
+        font-size: 22px;
+      }
+    }
+  }
+}

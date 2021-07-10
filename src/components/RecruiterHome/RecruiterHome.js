@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./RecruiterHome.module.scss";
 import { useHistory } from "react-router";
 import PostCard from "./PostCard";
+import { Link } from "react-router-dom";
 
 const LoginHome = () => {
   const [posts, setPosts] = useState({
@@ -12,6 +13,7 @@ const LoginHome = () => {
   const history = useHistory();
   useEffect(() => {
     fetchPosts();
+    //eslint-disable-next-line
   }, []);
 
   const fetchPosts = () => {
@@ -28,22 +30,15 @@ const LoginHome = () => {
       })
       .then(({ data }) => {
         if (data.code === 200) {
-          console.log(data.data);
           setPosts(data.data);
-        } else {
-          alert("You are not authorized");
-          history.push("/");
         }
-      })
-      .catch((error) => {
-        alert("You are not authorized");
       });
   };
   return (
     <div className={styles.homeWrapper}>
       <h2>Jobs posted by you</h2>
       {/* <PostCard></PostCard> */}
-      {posts.data.length ? (
+      {posts?.data.length ? (
         <div className={styles.postsWrapper}>
           {posts?.data.map((post, index) => (
             <PostCard key={index} post={post} />
@@ -52,7 +47,9 @@ const LoginHome = () => {
       ) : (
         <div className={styles.noPostWrapper}>
           <h3>Your posted jobs will show here!</h3>
-          <button>Post a Job</button>
+          <Link to="/post">
+            <button>Post a Job</button>
+          </Link>
         </div>
       )}
     </div>

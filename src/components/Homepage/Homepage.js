@@ -10,7 +10,9 @@ const Homepage = () => {
             <h1>
               Welcome to My<span>Jobs</span>
             </h1>
-            <button>Get Started</button>
+            <Link to="/login">
+              <button>Get Started</button>
+            </Link>
           </div>
           <div className={styles.image}>
             <img src="" alt="" />
